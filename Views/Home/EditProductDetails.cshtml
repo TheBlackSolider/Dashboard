@@ -1,0 +1,62 @@
+﻿@model ProductDetails
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+	ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <body id="kt_app_body" data-kt-app-layout="dark-sidebar" data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" class="app-default">
+
+
+        <h1 style="font-family:Georgia">Change the product's details</h1>
+		<form asp-action="UpdateProductsDetails" method="post">
+			<input type="hidden" asp-for="@Model.ProductId"  value="@TempData["Id"]" style="font-family:Georgia" />
+            <input type="hidden" asp-for="@Model.OrderNumber" style="font-family:Georgia" />
+            <div class="row">
+                <div class="col-sm-12 ">
+					<label style="font-family:Georgia" for="AutherName">Auther Name</label>
+					<input asp-for="@Model.AutherName" type="text" class="form-control" id="AutherName" name="AutherName" style="font-family:Georgia" />
+                </div>
+            </div>
+			<div class="col-sm-12 ">
+				<label style="font-family:Georgia" for="Type">Type</label>
+				<input asp-for="@Model.Type" type="text" class="form-control" id="Type" name="Type" style="font-family:Georgia" />
+			</div>
+			<div class="col-sm-12 ">
+				<label style="font-family:Georgia" for="ReleaseDate">ReleaseDate</label>
+				<input asp-for="@Model.ReleaseDate" type="text" class="form-control" id="ReleaseDate" name="ReleaseDate" style="font-family:Georgia" />
+			</div>
+			  <div class="col-sm-12 ">
+				<label style="font-family:Georgia" for="QTY">QTY</label>
+				<input asp-for="@Model.QTY" type="number" class="form-control" id="QTY" name="QTY" style="font-family:Georgia" />
+                </div>
+			<div class="col-sm-12 ">
+				<label style="font-family:Georgia" for="Price">Price</label>
+				<input asp-for="@Model.Price" type="text" class="form-control" id="Price" name="Price" style="font-family:Georgia" />
+			</div>
+			<div class="col-sm-12 ">
+				<label style="font-family:Georgia" for="Image">Image</label>
+				<input asp-for="@Model.Image" type="text" class="form-control" id="Image" name="Image" style="font-family:Georgia" />
+			</div>
+			  <div class="col-sm-12 ">
+				<label style="font-family:Georgia" for="ProductDescription">Product Description</label>
+				<input asp-for="@Model.ProductDescription" type="text" class="form-control" id="ProductDescription" name="ProductDescription" style="font-family:Georgia" />
+                </div>
+
+            <div class="row">
+                <div class="col-sm-12 d-flex mt-2 justify-content-sm-center">
+
+                    <button style="font-family:Georgia" type="submit" class="btn btn-danger p-2">Save</button>
+                </div>
+            </div>
+        </form>
+
+    </body>
+</div>
+
+
+
+
+
+
+	

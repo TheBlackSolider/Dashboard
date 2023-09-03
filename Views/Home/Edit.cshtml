@@ -1,0 +1,33 @@
+﻿
+@model Product 
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container">
+    <body id="kt_app_body" data-kt-app-layout="dark-sidebar" data-kt-app-sidebar-push-header="true" data-kt-app-sidebar-push-toolbar="true" data-kt-app-sidebar-push-footer="true" data-kt-app-toolbar-enabled="true" class="app-default">
+
+
+        <h1  style="font-family:Georgia">Change the product's details</h1>
+        <form  asp-action="UpdateProducts" method="post">
+            <input type="hidden" asp-for="@Model.Id" style="font-family:Georgia" />
+            <div class="row">
+                <div class="col-sm-12 ">
+                    <label style="font-family:Georgia" for="ProductName">Product Name</label>
+                    <input asp-for="@Model.ProductName" type="text" class="form-control" id="ProductName" name="ProductName" style="font-family:Georgia" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 d-flex mt-2 justify-content-sm-center">
+
+                    <button style="font-family:Georgia" type="submit" class="btn btn-danger p-2">Save</button>
+                </div>
+            </div>
+        </form>
+
+    </body>
+</div>
+
+
